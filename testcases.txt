@@ -1,0 +1,19 @@
+# kommentar här
+eea,pass,20,3,1
+eea,fail,20,3,2
+eea,pass,180,150,30
+eea,pass,83,51,1
+eea,fail,83,51,7
+eea,pass,117,97,1
+eea,fail,117,97,2
+phi,pass,33,20
+phi,fail,33,19
+phi,pass,77,60
+phi,pass,32,16
+phi,pass,99,60
+inverse,pass,3,20,7
+inverse,fail,3,20,6
+inverse,pass,3,26,9
+inverse,fail,3,26,7
+inverse,pass,5,54,11
+inverse,fail,5,54,9
