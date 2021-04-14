@@ -1,4 +1,13 @@
 # kommentar här
+prime,pass,7
+prime,pass,37
+prime,pass,79
+prime,pass,1013
+prime,pass,13441
+prime,pass,701279
+prime,fail,-1
+prime,fail,0
+prime,fail,4
 eea,pass,20,3,1
 eea,fail,20,3,2
 eea,pass,180,150,30
