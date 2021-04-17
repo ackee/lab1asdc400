@@ -1,28 +1,24 @@
-# kommentar här
-prime,pass,7
-prime,pass,37
-prime,pass,79
-prime,pass,1013
-prime,pass,13441
-prime,pass,701279
-prime,fail,-1
-prime,fail,0
-prime,fail,4
-eea,pass,20,3,1
-eea,fail,20,3,2
+# File with function and values to be tested.
+# Available tests = {prime(int):bool, eea(int,int):int, phi(int):int, inverse(int,int):int}
+# Format: "test,values...,expected value" CSV.
+prime,7,True
+prime,37,True
+prime,79,True
+prime,1013,True
+prime,13441,True
+prime,701279,True
+prime,-1,False
+prime,0,False
+prime,4,False
+eea,20,3,1
 eea,pass,180,150,30
-eea,pass,83,51,1
-eea,fail,83,51,7
-eea,pass,117,97,1
-eea,fail,117,97,2
-phi,pass,33,20
-phi,fail,33,19
-phi,pass,77,60
-phi,pass,32,16
-phi,pass,99,60
-inverse,pass,3,20,7
-inverse,fail,3,20,6
-inverse,pass,3,26,9
-inverse,fail,3,26,7
-inverse,pass,5,54,11
-inverse,fail,5,54,9
+eea,83,51,1
+eea,117,97,1
+phi,33,20
+phi,77,60
+phi,32,16
+phi,99,60
+inverse,3,20,7
+inverse,3,26,9
+inverse,5,54,11
+inverse,2,20,-1
