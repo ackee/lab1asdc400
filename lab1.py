@@ -47,10 +47,10 @@ Given the integer, the code if-statement checks if the "num" is greater then 1, 
 Source description: https://en.wikipedia.org/wiki/Primality_test
 """
 def is_prime(num):
-    if num <= 1 or num % 2 == 0:
-        return False
     if num == 2 or num == 3:
         return True
+    if num <= 1 or num % 2 == 0:
+        return False
     for i in range(3,int(num**0.5)+1,2):
         if (num % i) == 0:
             return False
@@ -227,6 +227,8 @@ def menu():
                     run_inverse()
                 else:
                     run_tests()
+            elif option == -1:
+                print("Good bye.")
             else:
                 print("Invalid choice - pick again.")
         except ValueError:

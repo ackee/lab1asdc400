@@ -1,6 +1,8 @@
 # File with function and values to be tested.
 # Available tests = {prime(int):bool, eea(int,int):int, phi(int):int, inverse(int,int):int}
 # Format: "test,values...,expected value" CSV.
+prime,2,True
+prime,3,True
 prime,7,True
 prime,37,True
 prime,79,True
@@ -11,7 +13,7 @@ prime,-1,False
 prime,0,False
 prime,4,False
 eea,20,3,1
-eea,pass,180,150,30
+eea,180,150,30
 eea,83,51,1
 eea,117,97,1
 phi,33,20
