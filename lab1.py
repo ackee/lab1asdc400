@@ -25,7 +25,7 @@ def testcases():
                     l = list(map(lambda x : int(x),v[1:4]))
                     eeat.append(l)
                 elif v[0] == 'phi':
-                    l = list(map(lambda x: int(x), v[1:3]))
+                    l = list(map(lambda x: int(x), v[1:4]))
                     phit.append(l)
                 elif v[0] == 'inverse':
                     l = list(map(lambda x: int(x), v[1:4]))
@@ -77,15 +77,22 @@ def EEA(a,b):
 """
 Task 3
 The code below represents the Euler phi function.
+If both numbers are prime(p,q) then the result is (p-1)(q-1)
 Source description: https://en.wikipedia.org/wiki/Euler%27s_totient_function
 """
-def phi(n):
+def phi_nonprime(n):
     r = 0
     for i in range(n):
         if(EEA(n, i) == 1):
             r += 1
     
     return r 
+
+def phi(p1, p2):
+    if not is_prime(p1) or not is_prime(p2):
+        return phi_nonprime(p1*p2)
+    return (p1-1) * (p2-1)
+
 
 """
 Task 4
@@ -130,9 +137,12 @@ def run_eea():
     input()
 
 def run_phi():
-    n = int(input("Insert number to check: "))
-    r = phi(n)
-    print(f"{n} has {r} relatively prime numbers.")
+    n1 = int(input("Insert first number to check: "))
+    n2 = int(input("Insert second number to check: "))
+    if not is_prime(n1) or not is_prime(n2):
+        print("WARNING: One of the numbers are not prime, might take a long time to calculate!")
+    r = phi(n1,n2)
+    print(f"{n1*n2} has {r} relatively prime numbers.")
     print("Press the any key to go back.")
     input()
 
@@ -178,12 +188,12 @@ def run_tests():
     #Test Phi
     print("\nTesting Phi algorithm - tests should pass:")
     for t in phitests:
-        evald = phi(t[0])
-        if evald == t[1]:
-            print(f"PASSED - phi({t[0]})={evald}")
+        evald = phi(t[0],t[1])
+        if evald == t[2]:
+            print(f"PASSED - phi({t[0],t[1]})={evald}")
         else:
             n_errors += 1
-            print(f"FAILED - phi({t[0]})={evald} expected {t[1]}")
+            print(f"FAILED - phi({t[0],t[1]})={evald} expected {t[2]}")
             
     #Test Inverse
     print("\nTesting Inverse algorithm - tests should pass:")
